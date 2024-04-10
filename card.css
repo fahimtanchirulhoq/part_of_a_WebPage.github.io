@@ -1,0 +1,175 @@
+ *{
+
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;}
+    
+    .eid{
+        margin-top: 10px;
+    }
+    body{
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background:green;
+        position: relative;
+    }
+    body::before{
+        height: 100%;
+        width: 100%;
+        content: '';
+        position: absolute;
+        background: #ff676d;
+       clip-path: inset( 40% 0 0 0);
+       z-index: -1;
+    }
+
+    .container{
+        max-width: 95%;
+        
+        width: 72%;
+        padding: 80px 0 ;
+    }
+
+    .container .main-card{
+width: 200%;
+
+justify-content: space-evenly;
+display: flex;
+transition: all is ease;
+
+    }
+
+    #two:checked~ .main-card{
+        margin-left: -100%;
+
+     }
+
+    .main-card .cards{
+       width: calc(100%/2 -10px); 
+     justify-content: space-between;
+   
+     display: flex;
+    }
+    
+    .main-card .cards .card{
+       
+        background: #fff;
+        width: calc(100%/3 -10px);
+        padding: 30px;
+        border-radius: 20px;
+        margin: 0 10px;
+        transition: all 0.8s ease;
+
+    }
+    .main-card .cards .card :hover{
+    transform:translateY(-15px);
+    }
+    .cards .card .content{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .cards .card .content .img{
+        height: 130px;
+        width: 130px;
+        margin-bottom: 14px;
+        background: #ff676d;
+        padding: 3px;
+        border-radius: 50%;
+        
+    }
+    
+    .cards .card .content .img img{ 
+      height: 100%;
+      width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    }
+    
+    .card .content .details .name{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    .card .content .details .job{
+        font-size: 20px;
+        color: #ff676d;
+    
+    }
+    .card .content .media-icons{
+        display: flex;
+        margin-top: 10px;
+    }
+    .card .content .media-icons i{
+        height: 35px;
+        width: 35px;
+        color: #fff;
+        background: #ff676d;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 35px;
+        border: 2px solid transparent;
+        font-size: 14px;
+        transition: all 0.4s ease;
+    }
+    .card .content .media-icons i{
+        margin: 0 8px; 
+
+    }
+
+    
+    .card .content .media-icons i:hover {
+        border-color: #ff676d;
+        color: #ff676d;
+        background-color: #fff;
+    }
+    
+    .button{
+        display: flex;
+        margin: 20px;
+        justify-content: center;
+    }
+
+     .button label{
+ height: 15px;
+ width:15px ;
+ background: #fff;
+ margin: 0 4px;
+ border-radius: 20px;
+ transition: all 0.5s ease;
+     }
+
+     .button label.active {
+        width: 35px;
+
+     }
+     #one:checked~ .button label.one{
+        width: 35px;
+
+     }
+     #two:checked~ .button label.two{
+        width: 35px;
+
+     }
+
+     #one:checked~ .button label.two{
+        width: 15px;
+
+     }
+
+     #two:checked~ .button label.one{
+        width: 15px;
+
+     }
+
+     input[type="radio"]{
+        display: none;
+     }
